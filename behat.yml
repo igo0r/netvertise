@@ -1,0 +1,19 @@
+# Default profile
+default:
+    #formatters:
+     #   junit: true
+    extensions:
+        Behat\Symfony2Extension: ~
+        Behat\MinkExtension:
+            default_session: 'selenium2'
+            base_url: 'http://netvertise.com/'
+            symfony2: ~
+            browser_name: firefox
+            selenium2: ~
+            goutte: ~
+    suites:
+        TestSuite:
+            type: symfony_bundle
+            bundle: AppBundle
+            filters:
+                tags: @new
